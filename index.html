@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <link rel="stylesheet" href="main.css">
+    <title>Algorithm Visualizer</title>
+</head>
+<body bgcolor="pink">
+    <h1  style="text-align: center;">Algorithm Visualizer</h1>
+    <div id="controls" style="text-align: center;">
+    <label for="inp" >Range</label>
+    <input type="range" 
+           id="inp"
+           value="10" min="10" max="80" onclick="visualiser()">
+           <br>
+           <label for="spd">Speed</label>
+    <input type="range" 
+           id="spd"
+           value="3" min="1" max="5" onclick="chngspeed()">
+           <br>
+           <label for="algos">Choose algo to visualise</label>
+<select name="algos" id="algos">
+    <option value="sel">Selection Sort</option>
+    <option value="bub">Bubble Sort</option>
+    <option value="ins">Insertion Sort</option>
+    <option value="quick">Quick Sort</option>
+</select>
+<br>
+<button id ="start" onclick="start()">start</button><span id="status"></span>
+<button id ="reset" onclick="reset()">reset</button>
+</div>
+<span id="status"></span>
+    <div class="main" id="main">
+
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
